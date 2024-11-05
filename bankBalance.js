@@ -14,18 +14,17 @@ function calculateBalances(arrDeOperaciones) {
       : (saldoTotalDeDepositos += arrDeOperaciones[i]);
     saldoActualDelCliente += arrDeOperaciones[i];
   }
-  console.log("El total de depositos es: " + saldoTotalDeDepositos);
-  console.log("El total de retiros es: " + saldoActualDeRetiros);
-  console.log("El saldo actual es: " + saldoActualDelCliente);
+  //console.log("El total de depositos es: " + saldoTotalDeDepositos);
+  //console.log("El total de retiros es: " + saldoActualDeRetiros);
+  //console.log("El saldo actual es: " + saldoActualDelCliente);
+  return (`El monto total de los depósitos es de: $${saldoTotalDeDepositos}, el monto total de los retiros es de: ${saldoActualDeRetiros}, Por lo tanto, su saldo actual en la cuenta es de: $${saldoActualDelCliente}`);
 }
 
-function bankBalance(nombre, apellido, operaciones) {
-  calculateBalances(operaciones);
-  return (`Estimada ${nombre}${apellido} El monto total de los depósitos es de: $${saldoTotalDeDepositos}, el monto total de los retiros es de: ${saldoActualDeRetiros}, Por lo tanto, su saldo actual en la cuenta es de: $${saldoActualDelCliente}`);
+function bankBalance(nombre, apellido, arrDeOperaciones) {
+  let stringSaldos= calculateBalances(arrDeOperaciones);
+  console.log (`Estimada ${nombre}${apellido} ${stringSaldos}`);
 }
 
-calculateBalances(operaciones);
+bankBalance("Pepa","Flores",operaciones);
 
-//bankBalance("Pepa","Flores",operaciones);
-
-//module.exports = bankBalance
+module.exports = bankBalance

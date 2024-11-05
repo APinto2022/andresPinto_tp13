@@ -32,13 +32,15 @@ mostrarEnMayuscula("andres");
 
 //Crear una función que reciba como parámetro un array de números positivos.
 //Tendrá la responsabilidad de retornar un nuevo array pero sólo con los valores pares
-let numerosPositivos=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+let numerosPositivos=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,22];
 function devuelveArregloDePares(arreglo){
-    for(let i=0;i<arreglo.length;i++{
+    let arrDePares=[];
+    for(let i=0;i<arreglo.length;i++){
         if(arreglo[i]%2==0){
-            
+            arrDePares.push(arreglo[i]);
         }
-    })
+    }return arrDePares;
 }
-
+let arrDeOperaciones=devuelveArregloDePares(numerosPositivos);
+console.log(arrDeOperaciones);
 
