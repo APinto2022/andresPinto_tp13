@@ -41,6 +41,13 @@ function devuelveArregloDePares(arreglo){
         }
     }return arrDePares;
 }
-let arrDeOperaciones=devuelveArregloDePares(numerosPositivos);
-console.log(arrDeOperaciones);
 
+console.log(devuelveArregloDePares(numerosPositivos));
+
+/*module.exports = {
+    showNumbers,
+    printEveryThree,
+    totalSummation,
+    showToUpperCase,
+    devuelveArregloDePares
+    }*/
